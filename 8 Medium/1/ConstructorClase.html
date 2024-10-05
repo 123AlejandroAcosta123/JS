@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //DECLARACION DE CLASE
+
+        class papel {
+            constructor(Alto, ancho){
+                this.Alto=Alto;
+                this.ancho=ancho;
+            }
+        }
+
+        // EXPRESIÓN DE CLASE
+        //Expresion clase anonima, la clase no tiene nombre
+        let papelA = class{
+            constructor(Alto, Ancho){
+                this.Alto=Alto;
+                this.Ancho=Ancho;
+            }
+        }
+
+        //Expresion clase NO anonima, la clase no tiene nombre
+        let papelB = class Papel3{
+            constructor(Alto, Ancho){
+                this.Alto=Alto;
+                this.Ancho=Ancho;
+            }
+        }
+    </script>
+    
+</body>
+</html>

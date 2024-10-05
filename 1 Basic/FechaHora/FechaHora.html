@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body onload="comenzarReloj()">
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Empezar tiempo</button>
+    <h1 id="textoAlarma">00:00:00</h1>
+
+
+    
+    <script>
+        let cantidadTiempo = document.getElementById("tiempoElegido");
+        let textPrendido = document.getElementById("textoAlarma");
+
+        function comenzarTiempo(){
+            setTimeout(finTiempo, 1000 * cantidadTiempo.value);
+        }
+
+        function finTiempo(){
+            textPrendido.textContent="Prendido";
+            textPrendido.style.color="green";
+        }
+
+        function comenzarReloj(){
+            setInterval(horaActual, 1000);
+        }
+
+        function horaActual(){
+            let horario = new Date();
+            let minutos =String(horario.getMinutes()).padStart(2,0);
+            let hora = String(horario.getHours()).padStart(2,0);
+            let segundos = String(horario.getSeconds()).padStart(2,0);
+
+            let horaReloj = hora + ":" + minutos + ":" + segundos;
+            textPrendido.textContent = horaReloj;
+        }
+    </script>
+</body>
+</html>

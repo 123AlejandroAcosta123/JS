@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <script src="funciones.js"></script>
+    <link href="estilo.css" rel="stylesheet">
+</head>
+<body>
+    <div class="contador">
+        <h3>Ingresa tu edad</h3>
+        <input style="margin-left:20px;" type="number" id="edadCliente" min="0" max="120">
+    </div>
+
+<div style="display: flex; margin-top: 10px;">
+<button onclick="recomendar('terror')">Terror</button>
+<button onclick="recomendar('comedia')">Comedia</button>
+<button onclick="recomendar('accion')">Accion</button>
+<button onclick="recomendar('drama')">Infantil</button>
+</div>   
+<h3>Nuestra recomendacion es:</h3>
+<h3 id="recomendacion">--</h3>
+
+</body>
+</html>

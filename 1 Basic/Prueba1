@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ingreso de usuarios</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <p>Deja tu nombre</p>
+    <input type="Text" ID="SaludarUsuario">
+    <button onclick="saludoVentana()">Enviar a ventana</button>
+</body>
+    <script>
+
+        let nombre = ["Alejandro", "Acosta", ["Chiquiza", "Otro nombre", "ETC"]];
+
+        function saludoVentana(){
+            let NombreUsuario = document.getElementById("SaludarUsuario").value;
+            alert("Hola " + NombreUsuario)
+        }
+
+    </script>
+</html>

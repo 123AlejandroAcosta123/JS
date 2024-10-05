@@ -1,0 +1,10 @@
+Para usar webpack se necesita instalar con "npm install webpack", "npm install webpack-cli"
+
+* Existen 2 formas de comprimir los archivos de js
+1 por development = donde se comprime como si la pagina a un no fuera a ser publicada si no se encuentra en desarrollo
+2 por production =  Se comprime demasiado para las paginas que ya estan en linea (Es menos legible pero mas eficiente)
+
+PARA COMPILAR SE USAN EL SIGUIENTE COMANDO
+
+npx webpack --mode=development
+npx webpack --mode=production

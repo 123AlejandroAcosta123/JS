@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Funciones.js"></script>
+    <link href="Estilo.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Deja tus datos</h1>
+
+    <div style="display: table-caption; margin-bottom:20px;">
+        <label for="Inputlegajo">Legajo</label>
+        <input type="text" id="Inputlegajo">
+        
+        <label for="Inputnombre">Nombre</label>
+        <input type="text" id="Inputnombre">
+
+        <label for="Inputapellido">Apellidos</label>
+        <input type="text" id="Inputapellido">
+
+        <label for="InputfechaNacimiento">Fecha de nacimiento</label>
+        <input type="text" id="InputfechaNacimiento">
+
+        <label for="Inputcargo">Tipo de cargo</label>
+        <input type="text" id="Inputcargo">
+    </div>
+
+    <button onclick="subirDatos()">Cargar datos</button>
+    <button onclick="mostrarDatos()">Mostrar datos</button>
+
+    <div>
+        <p id="TextoResultado"></p>
+    </div>
+
+    
+</body>
+</html>

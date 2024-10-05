@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto CRUD</title>
+    <script src="https://unpkg.com/axios@1.7.4/dist/axios.min.js"></script>
+    <script src="Funciones.js"></script>
+</head>
+<body onload="obtenerDatos()">
+
+<div style="display: flex;">
+    <div style="width: 50%;">
+        <!--Esto es un comentario, para ir explicando como se forma este elemento-->
+        <table>
+        <!--Este etiqueta engloba el contenido del encabezado de la tabla-->
+        <thead>
+            <!--Fila. El encabezado siempre tendrá una única fila-->
+            <tr>
+                <!--Columna. Aquí se coloca el nombre que tendrá la columna-->
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+                
+            </tr>
+        </thead>
+        <!--Este etiqueta engloba el contenido del cuerpo de la tabla-->
+
+        <!--Para el proyecto el contenido de <tbody> debe estar vacío ya que se le será asignado vía JS-->
+        <tbody id="Tbody">
+
+        </tbody>
+
+        </table>
+    </div>
+
+
+    <!--Columna izquierda-->
+    <div style="width:50%;">
+        <!--Primer formulario de envio-->
+        <h2>Ecuentra tus datos</h2>
+
+        <p>Colocar el id de tu dispositivo</p>
+
+        <input type="text" id="consultaID"> <br><br>
+
+        <button onclick= "ConsultaIndividual()">Consular</button><br><br>
+
+        <textarea id="MarcaDispositivo"></textarea>
+        <textarea id="ModeloDispositivo"></textarea>
+        <textarea id="ColorDispositivo"></textarea>
+        <textarea id="AlmacenamientoDispositivo"></textarea>
+        <textarea id="ProcesadorDispositivo"></textarea>
+
+        <div style="display:flex;">
+
+            <div style="width: 10%;">
+                <button onclick="Editar()">Editar</button>
+            </div>
+
+            <div style="width: 10%;">
+                <button onclick="borrar()">Borrar</button>
+            </div>
+
+        </div>
+        <!--Segundo formulario de envio-->
+        <h2>Envia un nuevo dispositivo</h2>
+        <p>ID</p>
+        <input type="text" id="EnviarD1"> <br>
+        <p>Modelo</p>
+        <input type="text" id="EnviarD2"> <br>
+        <p>Color</p>
+        <input type="text" id="EnviarD3"> <br>
+        <p>marca</p>
+        <input type="text" id="EnviarD4"> <br>
+        <p>almacenamiento</p>
+        <input type="text" id="EnviarD5"> <br>
+        <p>procesador</p>
+        <input type="text" id="EnviarD6"> <br>
+        <button onclick="enviar()">Enviar</button><br>
+    </div>
+</div>
+
+</body>
+</html>

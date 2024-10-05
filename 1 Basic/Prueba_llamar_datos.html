@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Escribe tu nombre</p>
+    <input type="text" id="NombreUsuario">
+    <button onclick= Enviarnombre()>Enviar</button>
+    <h1 id="registroNombre">No se ha registrado un nombre</h1>
+
+    <script>
+        function Enviarnombre(){
+            let formularioNombre = document.getElementById("NombreUsuario");
+            let envioNombre = document.getElementById("registroNombre");
+
+            envioNombre.textContent = "El nombre registrado es: " + formularioNombre.value;
+        }
+
+    </script>
+</body>
+</html>

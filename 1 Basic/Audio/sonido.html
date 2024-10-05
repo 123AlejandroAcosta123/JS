@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Empezar tiempo</button>
+    <h1 id="textoAlarma" style="color: red;">Apagado</h1>
+
+    <audio id="alarma">
+        <source src="y2mate.com - Alarma de despertador.mp3" type="audio/mpeg">
+        Sonido no valido 
+    </audio>
+
+    
+    <script>
+        let cantidadTiempo = document.getElementById("tiempoElegido");
+        let textPrendido = document.getElementById("textoAlarma");
+        let sonidoAlarma = document.getElementById("alarma");
+
+        function comenzarTiempo(){
+            setTimeout(finTiempo, 1000 * cantidadTiempo.value);
+        }
+
+        function finTiempo(){
+            textPrendido.textContent="Prendido";
+            textPrendido.style.color="green";
+            
+        }
+    </script>
+</body>
+</html>

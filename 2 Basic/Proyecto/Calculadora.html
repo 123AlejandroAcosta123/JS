@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Funciones.js"></script>
+    <link rel="stylesheet" href="EstiloCalculadora.css">
+    <title>Caluladora</title>
+</head>
+<body>
+<!-- Primera seccion -->
+    <div>
+     <!-- columna 1 -->
+        <div style="width: 50%;">
+            <div style="display: ruby;">  
+                <label for="primerNumero"></label>
+                    <input type="number" name="primerNumero" placeholder="Primer Numero" id="NumeroUno">
+                    <label for="segundoNumero"></label>
+                    <input type="number" name="segundoNumero" placeholder="segundo Numero" id="NumeroDos">
+            </div>
+            <div style="display: flex;">
+                <h4 style="margin-right: 10px;">Retultado:</h4>
+                <h4 id="resultado"> </h4>
+            </div>
+            
+            <div style="display: block;">
+                <button onclick="sumar()">+</button>
+                <button onclick="resta()">-</button>
+                <button onclick="division()">/</button>
+                <button onclick="multiplicar()">*</button>
+             </div>
+             <div style="display: block; margin: 20px 0px;">
+                <button onclick="raiz()">Raiz</button>
+                <button onclick="potencia()">Potencia</button>
+                <button onclick="absoluto()">valor absoluto</button>
+                <button onclick="ramdom()">Random</button>
+             </div>
+             <div style="display:  block;">
+                <button onclick="redondear()">Round</button>
+                <button onclick="redondearAbajo()">Floor</button>
+                <button onclick="redondearArriba()">Ceil</button>
+             </div>
+        </div>
+    </div>
+    
+</body>
+</html>

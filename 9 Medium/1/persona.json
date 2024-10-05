@@ -1,0 +1,14 @@
+{
+    "Nombre":"Alejandro Acosta",
+    "edad":20,
+    "Esestudiante": false,
+    "Direccion":{
+        "calle":"Cra37 #17",
+        "ciudad":"Bogotá.DC"
+
+    },
+    "Telefono":[
+        "555-555-555",
+        "555-666-555"
+    ]
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EstiloCuestionario.css">
+    <title>Cuestinario</title>
+</head>
+<body onload="incioTiempo()">
+    <audio id="audio">
+        <source src="y2mate.com - Alarma de despertador.mp3" type="audio/mpeg">
+        Sonido no valido
+    </audio src="">
+    <section>
+        <!--Columna izquierda -->
+        <div style="width: 50%;">
+           <h1>Responde todas las preguntas a conciencia</h1>
+
+           <h5>Pregunta1</h5>
+           <textarea  id="comentarios1" rows="10" cols="40">Escribe aquí tus comentarios</textarea><br>
+           <h5>Pregunta2</h5>
+           <textarea id="comentarios2" rows="10" cols="40">Escribe aquí tus comentarios</textarea><br>
+           <h5>Pregunta3</h5>
+           <textarea id="comentarios3" rows="10" cols="40">Escribe aquí tus comentarios</textarea><br>
+           <h5>Pregunta4</h5>
+           <textarea  id="comentarios4" rows="10" cols="40">Escribe aquí tus comentarios</textarea><br>
+           <h5>Pregunta4</h5>
+           <textarea  id="comentarios5" rows="10" cols="40">Escribe aquí tus comentarios</textarea><br>
+
+           <button onclick="respuestas()">Enviar respuestas</button>
+           <button onclick="reiniciar()">Reiniciar</button>
+
+        </div>
+
+        <!--Columna Derecha -->
+        <divs style="width: 50%;">
+            <h1>¿Listo?</h1>
+
+            <h2 id="textoTiempoExamen">30</h2>
+            <button onclick="respuestas()">Comenzar</button>
+
+            <script>
+
+            let sonido = document.getElementById("audio");
+            let textoTiempoExamen;       
+
+                function incioTiempo(){
+                    setTimeout(finTiempo, 1000 * 5);
+                    setTimeout(ActualizarTiempo, 1000)
+                }
+
+                function respuestas(){
+
+                    let textoTiempoExamen = document.getElementById("textoTiempoExamen");
+                    let respuesta1 = document.getElementById("comentarios1");
+                    let respuesta2 = document.getElementById("comentarios2");
+                    let respuesta3 = document.getElementById("comentarios3");
+                    let respuesta4 = document.getElementById("comentarios4");
+                    let respuesta5 = document.getElementById("comentarios5");
+                    let fechaExamen = new Date();
+                    let año = fechaExamen.getFullYear();
+                    let mes = fechaExamen.getMonth() + 1; 
+                    let dia = fechaExamen.getDate();
+
+                    alert("Fecha examen: " +  año  +  "/"  +  mes + "/"  +  dia  +  "/"  +  "Respuestas:  " + 
+                    respuesta1.value + respuesta2.value + respuesta3.value + respuesta4.value + respuesta5.value);
+
+                    location.reload();
+
+                }
+
+                function finTiempo(){
+                    sonido.play();
+                    alert("GAMER OVER");
+                    clearTimeout(textoTiempoExamen);
+
+                }
+
+                function ActualizarTiempo(){
+                    setInterval(cronometro, 1000);
+                }
+
+                function cronometro() {
+                let textoTiempoExamen = document.getElementById("textoTiempoExamen");
+                console.log(textoTiempoExamen);
+                let tiempoExamenEntero = parseInt(textoTiempoExamen.textContent);
+                console.log(tiempoExamenEntero);
+                let resultado = tiempoExamenEntero - 1;
+                textoTiempoExamen.textContent = resultado;
+                }
+
+                function reiniciar(){
+                    location.reload();
+                }
+                </script>
+
+        </div>
+    </section>
+</body>
+</html>

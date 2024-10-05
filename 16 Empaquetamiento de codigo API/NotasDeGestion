@@ -1,0 +1,9 @@
+Para gestionar dependencias devemos instalar "npm-check" este addon nos ayudara a revisar que dependencias no estamos usando con el fin de tener un mejor rendimiento en nuestro codigo
+
+PARA INSTALAR EJECUTAMOS EL SIGUIENTE COMANDO
+
+npm i -g npm-check  * Podemos colocar i en ves de install 
+                    * podemos colocar -g para que esta se haga de manera global
+
+
+

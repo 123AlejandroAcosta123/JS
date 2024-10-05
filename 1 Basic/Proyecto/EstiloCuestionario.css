@@ -1,0 +1,10 @@
+section{
+    display:inline-flex;
+    width: 100%;
+    margin: 6em 4em 6em 4em;
+}
+
+h1{
+    font-size: 40px;
+    font-family: sans-serif;
+}

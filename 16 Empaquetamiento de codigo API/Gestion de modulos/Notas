@@ -1,0 +1,39 @@
+Nos ayuda a reutilizar el codigo que tengamos
+Reduce la contaminacion del espacio global
+
+Para empezar a gestionar por modulos dentro de nuestra etiqueta Script declaramos el tipo de contenido 
+EJM
+
+<Script type="module" src="Ejemplo"> </Script>
+
+*******************************************************************
+
+Primera forma de exportar
+
+//Agregamos al inicio de la funcion la palabra export y en la pagina donde queremos importar colocamos la etiqueta debida
+
+Ejemplo
+
+Export funtion ejemplo(){
+    //codigo
+}
+
+import {//Nombre de la funcion// ejemplo} from "./Direccion del archivo donde se importa ";
+
+********************************************************************
+
+Segunda forma 
+
+// Se puede exportar una funcion colocando ademas la palabra "Default" y no dejamos el nombre de funcion.
+//No se le coloca nombre a la funcion a exportar ya que esta sera la que se llevara por defecto
+
+Ejemplo
+
+Export Default funtion (){
+    //codigo
+}
+
+import //Colocamos cualquier nombre from "./Direccion del archivo donde se importa ";
+
+
+
